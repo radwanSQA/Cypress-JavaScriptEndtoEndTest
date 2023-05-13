@@ -33,3 +33,7 @@ Cypress.Commands.add("getIframe", (iframe) => {
     .should("be.visible")
     .then(cy.wrap);
 });
+
+Cypress.Commands.add("clicklink", (label) => {
+  cy.get("a").contains(label).click();
+});
